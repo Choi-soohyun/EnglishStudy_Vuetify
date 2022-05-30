@@ -6,39 +6,39 @@
 					<v-card-title class="primary white--text">
 						<span>신규 작성</span>
 					</v-card-title>
-					<v-divider></v-divider>
+					<v-container class="grey lighten-3">
+						<v-card class="pa-3" outlined>
+							<v-row>
+								<v-col cols="12">
+									<v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="auto">
+										<template v-slot:activator="{ on, attrs }">
+											<v-text-field v-model="date" label="The date of study" prepend-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+										</template>
+										<v-date-picker v-model="date" no-title @input="btnInput">
+											<v-spacer></v-spacer>
+											<v-btn text color="primary" @click="menu = false"> Cancel </v-btn>
+											<v-btn text color="primary" @click="$refs.menu.save(date)"> OK </v-btn>
+										</v-date-picker>
+									</v-menu>
+								</v-col>
+								<v-col cols="12" lg="6">
+									<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="koreanValue" auto-grow />
+								</v-col>
+								<v-col cols="12" lg="6">
+									<v-textarea clearable clear-icon="mdi-close-circle" label="A English sentense" v-model="englishValue" auto-grow />
+								</v-col>
+								<v-col cols="12">
+									<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="tipValue" auto-grow />
+								</v-col>
+							</v-row>
 
-					<v-card-text class="pa-5">
-						<v-row>
-							<v-col cols="12">
-								<v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="auto">
-									<template v-slot:activator="{ on, attrs }">
-										<v-text-field v-model="date" label="The date of study" prepend-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-									</template>
-									<v-date-picker v-model="date" no-title @input="btnInput">
-										<v-spacer></v-spacer>
-										<v-btn text color="primary" @click="menu = false"> Cancel </v-btn>
-										<v-btn text color="primary" @click="$refs.menu.save(date)"> OK </v-btn>
-									</v-date-picker>
-								</v-menu>
-							</v-col>
-							<v-col cols="12" lg="6">
-								<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="koreanValue" auto-grow />
-							</v-col>
-							<v-col cols="12" lg="6">
-								<v-textarea clearable clear-icon="mdi-close-circle" label="A English sentense" v-model="englishValue" auto-grow />
-							</v-col>
-							<v-col cols="12">
-								<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="tipValue" auto-grow />
-							</v-col>
-						</v-row>
+							<div class="text-center mt-12 mb-5">
+								<v-rating v-model="rating" length="3" background-color="grey darken-1-2" color="yellow darken-3" empty-icon="$ratingFull" hover large></v-rating>
 
-						<div class="text-center mt-12 mb-5">
-							<v-rating v-model="rating" length="3" background-color="grey darken-1-2" color="yellow darken-3" empty-icon="$ratingFull" hover large></v-rating>
-
-							<span>{{ ratingMsg[rating - 1] }}</span>
-						</div>
-					</v-card-text>
+								<span>{{ ratingMsg[rating - 1] }}</span>
+							</div>
+						</v-card>
+					</v-container>
 				</v-card>
 			</v-col>
 			<v-col cols="12">

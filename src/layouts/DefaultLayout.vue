@@ -2,20 +2,22 @@
 	<v-app>
 		<!-- expand-on-hover : 마우스 올리면 메뉴 펼쳐지는 것 -->
 		<v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" app>
-			<v-list-item>
-				<v-list-item-avatar>
-					<v-avatar color="primary" size="30">
-						<span class="white--text">최</span>
-					</v-avatar>
-				</v-list-item-avatar>
-				<v-list-item-content>
-					<v-list-item-title class="text-h6"> Level.100 </v-list-item-title>
-					<v-list-item-subtitle> 1000일째 복습 중 </v-list-item-subtitle>
-				</v-list-item-content>
-				<v-btn icon @click.stop="miniOfDevice">
-					<v-icon>mdi-chevron-left</v-icon>
-				</v-btn>
-			</v-list-item>
+			<v-list height="68" class="ma-0 pa-0">
+				<v-list-item>
+					<v-list-item-avatar>
+						<v-avatar color="primary" size="30">
+							<span class="white--text">최</span>
+						</v-avatar>
+					</v-list-item-avatar>
+					<v-list-item-content>
+						<v-list-item-title class="text-h6"> Level.100 </v-list-item-title>
+						<v-list-item-subtitle> 1000일째 복습 중 </v-list-item-subtitle>
+					</v-list-item-content>
+					<v-btn icon @click.stop="miniOfDevice">
+						<v-icon>mdi-chevron-left</v-icon>
+					</v-btn>
+				</v-list-item>
+			</v-list>
 
 			<v-divider />
 
@@ -50,7 +52,7 @@
 			</template>
 		</v-navigation-drawer>
 
-		<v-app-bar height="66.8px" app elevation="0">
+		<v-app-bar height="68" app elevation="0">
 			<v-app-bar-nav-icon @click="miniOfDevice"></v-app-bar-nav-icon>
 
 			<v-toolbar-title>Page Title</v-toolbar-title>
