@@ -79,13 +79,28 @@
 									</v-menu>
 								</v-col>
 								<v-col cols="12" lg="6">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="selectedInfo.korean" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="selectedInfo.korean" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>한국어, 줄바꿈(O)</span>
+									</v-tooltip>
 								</v-col>
 								<v-col cols="12" lg="6">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="A foreign sentense" v-model="selectedInfo.foreign" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="A foreign sentense" v-model="selectedInfo.foreign" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>외국어, 줄바꿈(O)</span>
+									</v-tooltip>
 								</v-col>
 								<v-col cols="12">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="selectedInfo.tip" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="selectedInfo.tip" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>다양한 내용 작성(O)</span>
+									</v-tooltip>
 								</v-col>
 							</v-row>
 
@@ -164,7 +179,9 @@ export default {
 				selected: false,
 			},
 		],
-		selectedInfo: {},
+		selectedInfo: {
+			date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().substr(0, 10),
+		},
 	}),
 	computed: {
 		numberOfPages() {

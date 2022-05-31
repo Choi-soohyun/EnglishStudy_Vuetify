@@ -7,7 +7,7 @@
 						<span>신규 작성</span>
 					</v-card-title>
 					<v-container class="grey lighten-3">
-						<v-card class="pa-3" outlined>
+						<v-card class="pa-5" outlined>
 							<v-row>
 								<v-col cols="12">
 									<v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="auto">
@@ -22,13 +22,28 @@
 									</v-menu>
 								</v-col>
 								<v-col cols="12" lg="6">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="koreanValue" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="A Korean sentense" v-model="koreanValue" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>한국어, 줄바꿈(O)</span>
+									</v-tooltip>
 								</v-col>
 								<v-col cols="12" lg="6">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="A English sentense" v-model="englishValue" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="A English sentense" v-model="englishValue" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>외국어, 줄바꿈(O)</span>
+									</v-tooltip>
 								</v-col>
 								<v-col cols="12">
-									<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="tipValue" auto-grow />
+									<v-tooltip bottom>
+										<template v-slot:activator="{ on, attrs }">
+											<v-textarea clearable clear-icon="mdi-close-circle" label="Tip" v-model="tipValue" auto-grow v-bind="attrs" v-on="on" />
+										</template>
+										<span>다양한 내용 작성(O)</span>
+									</v-tooltip>
 								</v-col>
 							</v-row>
 
