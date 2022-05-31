@@ -16,30 +16,31 @@ const routes = [
 	},
 	{
 		path: '/example',
+		redirect: '/example/dashboard',
 		component: DefaultLayout,
 		children: [
 			{
-				path: '/',
+				path: 'dashboard',
 				name: 'Dashboard',
 				component: () => import('@/views/Dashboard'),
 			},
 			{
-				path: '/grid-system',
+				path: 'grid-system',
 				name: 'GridSystem',
 				component: () => import('@/views/GridSystem'),
 			},
 			{
-				path: '/grid-list-page',
+				path: 'grid-list-page',
 				name: 'GridListPage',
 				component: () => import('@/views/GridListPage'),
 			},
 			{
-				path: '/break-points',
+				path: 'break-points',
 				name: 'BreakPoints',
 				component: () => import('@/views/BreakPoints'),
 			},
 			{
-				path: '/typography',
+				path: 'typography',
 				name: 'Typography',
 				component: () => import('@/views/Typography'),
 			},

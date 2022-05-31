@@ -101,7 +101,7 @@ export default {
 			{ title: 'Random question', icon: 'mdi-head-question-outline', to: '/question' },
 		],
 		exampleItems: [
-			{ title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/example' },
+			{ title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/example/dashboard' },
 			{ title: 'GridSystem', icon: 'mdi-view-dashboard', to: '/example/grid-system' },
 			{
 				title: 'GridListPage',
