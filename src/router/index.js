@@ -6,6 +6,7 @@ import AuthLayout from '@/layouts/AuthLayout';
 import learn from './learn';
 import review from './review';
 import question from './question';
+import nice from './nice';
 
 Vue.use(VueRouter);
 
@@ -81,7 +82,7 @@ const routes = [
 
 const router = new VueRouter({
 	mode: 'history',
-	routes: [...routes, ...learn, ...review, ...question],
+	routes: [...routes, ...learn, ...review, ...question, ...nice],
 });
 
 export default router;
