@@ -116,6 +116,7 @@ export default {
 			{ title: 'Typography', icon: 'mdi-view-dashboard', to: '/example/typography' },
 			{ title: 'SignIn', icon: 'mdi-view-dashboard', to: '/example/auth/sign-in' },
 			{ title: 'SignUp', icon: 'mdi-view-dashboard', to: '/example/auth/sign-up' },
+			{ title: 'Nice 대시보드', icon: 'mdi-view-dashboard', to: '/nice/dashboard' },
 		],
 		right: null,
 	}),
