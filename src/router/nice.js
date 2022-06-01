@@ -9,6 +9,11 @@ export default [
 				name: '대시보드',
 				component: () => import('@/views/Nice/Dashboard/Dashboard'),
 			},
+			{
+				path: 'member',
+				name: '대시보드',
+				component: () => import('@/views/Nice/Member/Tabs'),
+			},
 		],
 	},
 ];
