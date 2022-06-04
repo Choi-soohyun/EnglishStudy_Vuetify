@@ -118,6 +118,8 @@ export default {
 			{ title: 'SignUp', icon: 'mdi-logout-variant', to: '/example/auth/sign-up' },
 			{ title: 'Nice 대시보드', icon: 'mdi-view-dashboard', to: '/nice/dashboard' },
 			{ title: 'Nice 회원사', icon: 'mdi-account', to: '/nice/member' },
+			{ title: 'Nice Draggable', icon: 'mdi-account', to: '/nice/draggable' },
+			{ title: 'Nice Draggable All', icon: 'mdi-account', to: '/nice/all' },
 		],
 		right: null,
 	}),
