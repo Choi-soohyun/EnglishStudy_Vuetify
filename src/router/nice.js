@@ -14,6 +14,16 @@ export default [
 				name: '대시보드',
 				component: () => import('@/views/Nice/Member/Tabs'),
 			},
+			{
+				path: 'draggable',
+				name: '대시보드',
+				component: () => import('@/views/Nice/Draggable/Base'),
+			},
+			{
+				path: 'all',
+				name: '대시보드',
+				component: () => import('@/views/Nice/Draggable/All'),
+			},
 		],
 	},
 ];
