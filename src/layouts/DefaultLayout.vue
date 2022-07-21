@@ -120,6 +120,8 @@ export default {
 			{ title: 'Nice 회원사', icon: 'mdi-account', to: '/nice/member' },
 			{ title: 'Nice Draggable', icon: 'mdi-account', to: '/nice/draggable' },
 			{ title: 'Nice Draggable All', icon: 'mdi-account', to: '/nice/all' },
+			{ title: 'Nice Draggable Treeview', icon: 'mdi-account', to: '/nice/treeview' },
+			{ title: 'Input Check Validation', icon: 'mdi-account', to: '/nice/inputchk' },
 		],
 		right: null,
 	}),
